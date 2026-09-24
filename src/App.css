@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fc;
+  color: #172033;
+}
+
+.school-page {
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 78px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  border-bottom: 1px solid #e5e9f0;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.logo span {
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #0b315b;
+}
+
+.logo small {
+  margin-top: 5px;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #b68b2c;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #172033;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #b68b2c;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  padding: 140px 7% 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+
+  background:
+    linear-gradient(
+      rgba(5, 24, 48, 0.78),
+      rgba(5, 24, 48, 0.88)
+    ),
+    linear-gradient(135deg, #0b315b, #164e7a);
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero-label,
+.section-label {
+  color: #c59a3a;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(44px, 7vw, 82px);
+  line-height: 1;
+  margin-bottom: 22px;
+  letter-spacing: -2px;
+}
+
+.hero h2 {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  max-width: 680px;
+  margin: 0 auto 35px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e3eaf3;
+}
+
+/* BUTTONS */
+
+.button {
+  display: inline-block;
+  padding: 14px 28px;
+  margin: 7px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 700;
+  background: #c59a3a;
+  color: white;
+  transition: 0.3s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background: #d7ad50;
+}
+
+.button-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.button-outline:hover {
+  background: white;
+  color: #0b315b;
+}
+
+/* SECTIONS */
+
+.section {
+  padding: 100px 7%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  margin-bottom: 22px;
+  color: #0b315b;
+}
+
+.section > p:not(.section-label) {
+  max-width: 760px;
+  margin: auto;
+  line-height: 1.8;
+  color: #657084;
+}
+
+/* LEGACY */
+
+.legacy {
+  background: #eef3f8;
+}
+
+/* ACADEMICS */
+
+.academics {
+  background: white;
+}
+
+.academic-cards {
+  max-width: 1050px;
+  margin: 55px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.academic-cards div {
+  padding: 35px 28px;
+  border: 1px solid #e5e9f0;
+  border-radius: 18px;
+  text-align: left;
+  background: #ffffff;
+  transition: 0.3s;
+}
+
+.academic-cards div:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 40px rgba(20, 45, 75, 0.1);
+}
+
+.academic-cards span {
+  font-size: 13px;
+  font-weight: 800;
+  color: #c59a3a;
+}
+
+.academic-cards h3 {
+  margin: 15px 0 10px;
+  color: #0b315b;
+  font-size: 22px;
+}
+
+.academic-cards p {
+  color: #657084;
+  line-height: 1.7;
+}
+
+/* FACILITIES */
+
+.facilities {
+  max-width: 1100px;
+  margin: 55px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.facility {
+  padding: 30px 15px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e7ebf1;
+  transition: 0.3s;
+}
+
+.facility:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(20, 45, 75, 0.1);
+}
+
+.facility-icon {
+  width: 44px;
+  height: 44px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eef3f8;
+  color: #c59a3a;
+}
+
+.facility h3 {
+  font-size: 16px;
+  color: #25334a;
+}
+
+/* ADMISSIONS */
+
+.admissions {
+  background: #0b315b;
+  color: white;
+}
+
+.admissions h2 {
+  color: white;
+}
+
+.admissions > p:not(.section-label) {
+  color: #dce6f0;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #f1f4f8;
+}
+
+.contact p {
+  margin-bottom: 10px !important;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 40px 20px;
+  text-align: center;
+  background: #061b32;
+  color: white;
+}
+
+footer h3 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin: 5px;
+  color: #aebdce;
+  font-size: 14px;
+}
+
+/* MOBILE */
+
+@media (max-width: 850px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .academic-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .facilities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+
+  .hero {
+    padding: 130px 20px 70px;
+  }
+
+  .hero h1 {
+    letter-spacing: -1px;
+  }
+
+  .section {
+    padding: 70px 20px;
+  }
+
+  .facilities {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    width: 90%;
+    max-width: 280px;
+  }
+
+}
+
+/* ENQUIRY FORM */
+
+.enquiry-form {
+  max-width: 650px;
+  margin: 45px auto 0;
+  display: grid;
+  gap: 16px;
+  text-align: left;
+}
+
+.enquiry-form input,
+.enquiry-form select,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #d9dfe8;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 15px;
+  background: white;
+  color: #172033;
+}
+
+.enquiry-form textarea {
+  resize: vertical;
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus,
+.enquiry-form textarea:focus {
+  outline: none;
+  border-color: #0b315b;
+}
+
+.enquiry-form .button {
+  border: none;
+  cursor: pointer;
+  justify-self: center;
+}
+.button-whatsapp {
+  background: #1f9d55;
+}
+
+.button-whatsapp:hover {
+  background: #178344;
+}
+@media (max-width: 500px) {
+  .enquiry-form {
+    width: 100%;
+  }
+
+  .enquiry-form input,
+  .enquiry-form select,
+  .enquiry-form textarea {
+    font-size: 16px;
+  }
+
+  .enquiry-form .button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
