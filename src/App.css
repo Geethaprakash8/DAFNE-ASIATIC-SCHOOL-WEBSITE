@@ -110,6 +110,7 @@ body {
   line-height: 1;
   margin-bottom: 22px;
   letter-spacing: -2px;
+  color: white;
 }
 
 .hero h2 {
@@ -415,5 +416,14 @@ footer p {
   .enquiry-form .button {
     width: 100%;
     max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .logo span {
+    color: #0b315b;
+  }
+
+  .logo small {
+    color: #b68b2c;
   }
 }
